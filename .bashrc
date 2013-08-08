@@ -16,7 +16,7 @@ alias grep='grep --color=auto'
 alias ls='ls --color=auto'
 alias ll='ls -l'
 alias la='ls -la'
-alias lt='ls -clthr'
+alias lt='ls -clthra'
 eval $(dircolors -b)
 alias ping='ping -c 3'
 alias ..='cd ..'
