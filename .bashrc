@@ -9,9 +9,15 @@ source ~/.git-prompt.sh
 #export TERM=xterm-256color
 #PS1='[\u@\h \W]\$ '
 PS1='\[\e[0;16m\]\u\[\e[m\] \[\e[1;34m\]\w\[\e[m\]\[\e[0;32m\]$(__git_ps1 " (%s)") \$ \[\e[m\]\[\e[0;00m\] '
+#PS1='$(tput bold)\u $(tput setaf 154)\w$(tput setaf 197)$(__git_ps1 " (%s)")$(tput sgr0)$(tput setaf 154)$(tput bold) \$ $(tput sgr0)'
 #PS1='[\u $(tput setaf 154)$(tput bold)\w$(tput setaf 197)$(__git_ps1 " (%s)")$(tput setaf 154)] \$ $(tput sgr0)'
 #PS1='\u $(tput setaf 5)$(tput bold)\w$(tput setaf 6)$(__git_ps1 " (%s)")$(tput setaf 5) \$ $(tput sgr0)'
 export PYTHONPATH=:/home/seb/workspace:/home/seb/workspace
+export PAGER="/bin/sh -c \"unset PAGER;col -b -x | \
+    vim -R -c 'set ft=man nomod nolist' -c 'map q :q<CR>' \
+    -c 'map <SPACE> <C-D>' -c 'map b <C-U>' \
+    -c 'set colorcolumn=0' \
+    -c 'nmap K :Man <C-R>=expand(\\\"<cword>\\\")<CR><CR>' -\""
 alias grep='grep --color=auto' 
 alias ls='ls --color=auto'
 alias ll='ls -l'
@@ -38,6 +44,13 @@ alias xrandroff='xrandr --output LVDS1 --auto --primary;xrandr --output VGA1 --o
 
 alias mntpi=/home/seb/.connect.sh
 alias umntpi='fusermount -u /home/seb/rasp'
+
+alias linarofs='sshfs linaro@linaro-alip.intern.kom.e-technik.tu-darmstadt.de:/home/linaro /home/seb/workspace/linaro'
+alias linaro='ssh -X linaro@linaro-alip.intern.kom.e-technik.tu-darmstadt.de'
+alias linarofsh='sshfs linaro@linaro-alip.fritz.box:/home/linaro /home/seb/workspace/linaro'
+alias linaroh='ssh -X linaro@linaro-alip.fritz.box'
+
+
 
 alias reboot='systemctl reboot'
 alias poweroff='systemctl poweroff'
