@@ -4,6 +4,19 @@
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
+
+if [ "$TERM" != "linux" ]; then
+	if which tmux 2>&1 >/dev/null; then
+	    # if no session is started, start a new session
+	    test -z ${TMUX} && tmux
+
+	    # when quitting tmux, try to attach
+	    while test -z ${TMUX}; do
+		tmux attach || break
+	    done
+	fi
+fi
+
 source ~/.git-prompt.sh
 
 #export TERM=xterm-256color
@@ -50,9 +63,8 @@ alias linaro='ssh -X linaro@linaro-alip.intern.kom.e-technik.tu-darmstadt.de'
 alias linarofsh='sshfs linaro@linaro-alip.fritz.box:/home/linaro /home/seb/workspace/linaro'
 alias linaroh='ssh -X linaro@linaro-alip.fritz.box'
 
-
-
 alias reboot='systemctl reboot'
 alias poweroff='systemctl poweroff'
 
-alias fun='figlet -f $(ls /usr/share/figlet/fonts/*.flf | shuf -n1) namakukingkong | cowsay -n -f $(ls /usr/share/cows/ | shuf -n1)'
+alias fun='figlet -f $(ls /usr/share/figlet/fonts/*.flf | shuf -n1) "als
+OB EY"| cowsay -n -f $(ls /usr/share/cows/ | shuf -n1)'

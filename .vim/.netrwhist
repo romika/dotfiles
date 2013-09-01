@@ -1,9 +1,9 @@
 let g:netrw_dirhistmax  =10
 let g:netrw_dirhist_cnt =7
-let g:netrw_dirhist_1='/home/seb/workspace'
-let g:netrw_dirhist_2='/home/seb/workspace/webmining'
-let g:netrw_dirhist_3='/home/seb/workspace/webmining/lab4_seb'
-let g:netrw_dirhist_4='/home/seb/workspace/webmining/lab4_seb/code_py'
-let g:netrw_dirhist_5='/home/seb/workspace/webmining/lab4_seb/code_py/naivebayes'
-let g:netrw_dirhist_6='/home/seb/workspace/pysi'
-let g:netrw_dirhist_7='/home/seb/workspace/arteVIDEOS'
+let g:netrw_dirhist_1='/home/seb/.vim'
+let g:netrw_dirhist_2='/home/seb/workspace'
+let g:netrw_dirhist_3='/home/seb/workspace/masher'
+let g:netrw_dirhist_4='/home/seb/.vim/bundle'
+let g:netrw_dirhist_5='/home/seb/workspace/circular_buffer'
+let g:netrw_dirhist_6='/home/seb/.cache/sessions'
+let g:netrw_dirhist_7='/home/seb'

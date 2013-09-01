@@ -135,11 +135,21 @@ inoremap jk <esc>
 cnoremap kj <Esc>
 cnoremap jk <Esc>
 
+let g:tmux_navigator_no_mappings = 1
+nnoremap <silent> <C-h> :TmuxNavigateLeft<CR>
+nnoremap <silent> <C-j> :TmuxNavigateDown<CR>
+nnoremap <silent> <C-k> :TmuxNavigateUp<CR>
+nnoremap <silent> <C-l> :TmuxNavigateRight<CR>
 " Easy split navigation
-nnoremap <M-h> <C-w>h
-nnoremap <M-j> <C-w>j
-nnoremap <M-k> <C-w>k
-nnoremap <M-l> <C-w>l
+"nnoremap <M-h> <C-w>h
+"nnoremap <M-j> <C-w>j
+"nnoremap <M-k> <C-w>k
+"nnoremap <M-l> <C-w>l
+
+nnoremap <C-c> <C-w>c
+
+" Toogle zoom current window
+nnoremap <silent> <C-o> :ZoomWin<CR>
 
 " Improve movement on wrapped lines
 nnoremap j gj
@@ -160,6 +170,9 @@ nnoremap <Leader>N :cprevious<CR>
 nnoremap <Leader>h z=
 nnoremap <Leader>k [s 
 nnoremap <Leader>j ]s
+
+" start ctrlp
+nnoremap <silent> <C-f> :CtrlP<CR>
 
 " space bar un-highligts search
 noremap <silent> <Space> :silent noh<Bar>echo<CR>
