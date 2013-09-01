@@ -31,6 +31,7 @@ export PAGER="/bin/sh -c \"unset PAGER;col -b -x | \
     -c 'map <SPACE> <C-D>' -c 'map b <C-U>' \
     -c 'set colorcolumn=0' \
     -c 'nmap K :Man <C-R>=expand(\\\"<cword>\\\")<CR><CR>' -\""
+export EDITOR=vim
 alias grep='grep --color=auto' 
 alias ls='ls --color=auto'
 alias ll='ls -l'
@@ -45,6 +46,7 @@ alias less='/usr/share/vim/vim73/macros/less.sh'
 alias moff='sleep 1 && xset dpms force off'
 alias duh='du -hs * | sort -h'
 alias tmuxp=/home/seb/.tmux_code_session.sh
+alias screencast='ffmpeg -f alsa -i pulse -f x11grab -r 20 -s 1600x900 -i :0.0 -acodec pcm_s16le -vcodec h264 screencast.avi'
 
 alias xrandrs='xrandr --output LVDS1 --auto --primary;xrandr --output VGA1 --auto --same-as LVDS1'
 alias xrandrr='xrandr --output LVDS1 --auto --primary;xrandr --output VGA1 --noprimary --auto --right-of LVDS1'

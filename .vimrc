@@ -1,6 +1,6 @@
 if &term=~'linux'
 	colorscheme desert
-elseif &term=~'xterm' || &term=~'screen-256color' || &term=~'xterm-256color'
+elseif &term=~'xterm' || &term=~'-256color'
 	" Set 256color
 	set t_Co=256
 
