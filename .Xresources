@@ -1,0 +1,156 @@
+!*customization: -color
+
+! set TERM variable for other programs
+*xterm*termName:  xterm-256color
+
+! disable boarder
+*xterm*borderWidth: 0
+
+!-- Xft settings -- !
+!Xft.dpi:        96
+Xft.antialias: true 
+Xft.rgba:       rgb
+!Xft.hinting:   false 
+!Xft.hintstyle:  hintslight
+
+! enable UTF-8
+*xterm*locale: true
+! more lines to scroll back
+*xterm*salveLines: 4096
+
+! customize font
+*xterm*faceName: DejaVu Sans Mono
+*xterm*faceSize: 11
+
+! Molokai theme
+*xterm*background: #101010
+*xterm*foreground: #d0d0d0
+*xterm*cursorColor: #d0d0d0
+*xterm*color0: #101010
+*xterm*color1: #960050
+*xterm*color2: #66aa11
+*xterm*color3: #c47f2c
+*xterm*color4: #30309b
+*xterm*color5: #7e40a5
+*xterm*color6: #3579a8
+*xterm*color7: #9999aa
+*xterm*color8: #303030
+*xterm*color9: #ff0090
+*xterm*color10: #80ff00
+*xterm*color11: #ffba68
+*xterm*color12: #5f5fee
+*xterm*color13: #bb88dd
+*xterm*color14: #4eb4fa
+*xterm*color15: #d0d0d0
+
+! Compile xft: Attempt to find a visual with the given bit depth; option -depth.
+! URxvt*depth: bitdepth
+
+! Compile xft: Turn on/off double-buffering for xft (default enabled).  On some card/driver combination enabling it slightly decreases performance, on most it greatly helps it. The slowdown is small, so it should normally be enabled.
+! URxvt*buffered: boolean
+
+! Create the window with the specified X window geometry [default 80x24]; option -geometry.
+! URxvt*geometry: geom
+
+! Use the specified colour as the windows background colour [default White]; option -bg.
+URxvt*background: #101010
+
+! Use the specified colour as the windows foreground colour [default Black]; option -fg.
+URxvt*foreground: #d0d0d0
+
+! Use the specified colour for the colour value n, where 0-7 corresponds to low-intensity (normal) colours and 8-15 corresponds to high-intensity (bold = bright foreground, blink = bright background) colours. The canonical names are as follows:
+URxvt*color0: #101010
+URXvt*color1: #960050
+URXvt*color2: #66aa11
+URXvt*color3: #c47f2c
+URXvt*color4: #30309b
+URXvt*color5: #7e40a5
+URXvt*color6: #3579a8
+URXvt*color7: #9999aa
+URXvt*color8: #303030
+URXvt*color9: #ff0090
+URXvt*color10: #80ff00
+URXvt*color11: #ffba68
+URXvt*color12: #5f5fee
+URXvt*color13: #bb88dd
+URXvt*color14: #4eb4fa
+URXvt*color15: #d0d0d0
+
+! Use the specified colour for the cursor. The default is to use the foreground colour; option -cr.
+URxvt*cursorColor: #d0d0d0
+
+! Use the specified colour for the colour of the cursor text. For this to take effect, cursorColor must also be specified. The default is to use the background colour.
+! URxvt*cursorColor2: colour
+
+! True: simulate reverse video by foreground and background colours; option -rv. False: regular screen colours [default]; option +rv. See note in COLOURS AND GRAPHICS section.
+! URxvt*reverseVideo: boolean
+
+
+! Set the application icon pixmap; option -icon.
+! URxvt*iconFile: file
+
+! Select the fonts to be used. This is a comma separated list of font names that are checked in order when trying to find glyphs for characters. The first font defines the cell size for characters; other fonts might be smaller, but not (in general)
+URxvt*font: xft:DejaVu Sans Mono:regular:size=11
+URxvt*boldFont: xft:DejaVu Sans Mono:bold:size=11
+URxvt*italicFont: xft:DejaVu Sans Mono:italic:size=11
+URxvt*letterSpace: -1
+! 
+! When font styles are not enabled, or this option is enabled (True, option -is, the default), bold/blink font styles imply high intensity foreground/background colours. Disabling this option (False, option +is) disables this behaviour, the high
+! URxvt*intensityStyles: boolean
+
+! Set window title string, the default title is the command-line specified after the -e option, if any, otherwise the application name; option -title.
+! URxvt*title: string
+
+! Set the name used to label the windows icon or displayed in an icon manager window, it also sets the windows title unless it is explicitly set; option -n.
+! URxvt*iconName: string
+
+! True: enable the scrollbar [default]; option -sb. False: disable the scrollbar; option +sb.
+URxvt*scrollBar: False
+
+! Save number lines in the scrollback buffer [default 64]. This resource is limited on most machines to 65535; option -sl.
+URxvt*saveLines: 4069 
+
+! Internal border of number pixels. This resource is limited to 100; option -b.
+! URxvt*internalBorder: number
+
+! External border of number pixels. This resource is limited to 100; option -w, -bw, -borderwidth.
+! URxvt*externalBorder: number
+
+! Set MWM hints to request a borderless window, i.e. if honoured by the WM, the rxvt-unicode window will not have window decorations; option -bl.
+! URxvt*borderLess: boolean
+
+! Specifies number of lines (pixel height) to insert between each row of the display [default 0]; option -lsp.
+! URxvt*lineSpace: number
+
+! True: handle Meta (Alt) + keypress to set the 8th bit. False: handle Meta (Alt) + keypress as an escape prefix [default].
+! URxvt*meta8: boolean
+
+! Mouse pointer foreground colour.
+! URxvt*pointerColor: colour
+
+! Mouse pointer background colour.
+! URxvt*pointerColor2: colour
+
+! The string to send when the backspace key is pressed. If set to DEC or unset it will send Delete (code 127) or, with control, Backspace (code 8) - which can be reversed with the appropriate DEC private mode escape sequence.
+! URxvt*backspacekey: string
+
+! The string to send when the delete key (not the keypad delete key) is pressed. If unset it will send the sequence traditionally associated with the Execute key.
+! URxvt*deletekey: string
+
+! Change the meaning of triple-click selection with the left mouse button. Instead of selecting a full line it will extend the selection to the end of the logical line only; option -tcw.
+! URxvt*tripleclickwords: boolean
+
+! Turn on/off hold window after exit support. If enabled, urxvt will not immediately destroy its window when the program executed within it exits. Instead, it will wait till it is being killed or closed by the user.
+! URxvt*hold: boolean
+
+! Additional selection patterns, see the urxvtperl(3) manpage for details.
+! URxvt*selection.pattern-idx: perl-regex
+
+! Selection auto-transform patterns, see the urxvtperl(3) manpage for details.
+! URxvt*selection-autotransform.idx: perl-transform
+
+! Sets the hotkey that starts the incremental scrollback buffer search (default: "M-s").
+! URxvt*searchable-scrollback: keysym
+
+
+
